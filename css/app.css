@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: normal 16px sans-serif;
+  padding: 40px 0;
+  background: #efefef;
+}
+
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+  color: #333;
+  padding: 100px 50px;
+  background: #fff;
+  text-align: center;
+}
+
+.container h1 {
+  margin-bottom: 20px;
+  font-family: 'Droid Sans', sans-serif;
+  font-weight: bold;
+}
+
+.container h3 {
+  margin-bottom: 55px;
+  font-weight: normal;
+}
+
+.container h3 a {
+  font-size: 18px;
+  color: #1da7da;
+  text-decoration: none;
+}
+
+.container p {
+  max-width: 450px;
+  margin: 25px auto 55px;
+  font-size: 18px;
+  color: #4e4e52;
+  line-height: 1.4;
+}
+
+#my-gallery {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+
+  .container {
+    padding: 50px 30px;
+  }
+
+  p {
+    display: none;
+  }
+}
+
+/* vanilla-zoom */
+
+.vanilla-zoom {
+  width: 100%;
+  display: flex;
+}
+
+.vanilla-zoom .sidebar {
+  flex-basis: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.vanilla-zoom .sidebar img.small-preview {
+  width: 100%;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.vanilla-zoom .sidebar img.small-preview:last-child {
+  margin-bottom: 0;
+}
+
+.vanilla-zoom .zoomed-image {
+  flex: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-left: 5px;
+}
+
+@media (max-width: 768px) {
+  .vanilla-zoom .sidebar {
+    flex: 1;
+  }
+
+  .vanilla-zoom .sidebar img.small-preview {
+    cursor: auto;
+    margin-bottom: 12px;
+  }
+
+  .vanilla-zoom .zoomed-image {
+    display: none;
+  }
+}
